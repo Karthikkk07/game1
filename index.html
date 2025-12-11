@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        #btn{
+            position: absolute;
+            transition: 5s;
+        }
+
+    </style>
+</head>
+<body class="bg-light text-center p-5">
+    <h1 class="mb-4">Catch the confused button 😂🤣 </h1>
+    <button id="btn" class="btn btn-primary">catch me if u can reddy!</button>
+    <script>
+        const btn = document.getElementById('btn');
+        btn.onmouseover=() =>{
+            btn.style.left = Math.random()*80 + 'vw';
+            btn.style.top = Math.random()*80 + 'vh';
+        };
+        
+        btn.onclick=() =>{
+            btn.innerText="got u nsr";
+            btn.classList.remove('btn-primary');
+            btn.classList.add('btn-success');
+            btn.style.left = '45vw';
+            btn.style.top = '40vh';
+        };
+
+    </script>
+</body>
+</html>
